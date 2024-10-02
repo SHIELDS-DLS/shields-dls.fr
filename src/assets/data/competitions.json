@@ -1,0 +1,80 @@
+[
+  {
+    "name": "ECW",
+    "date": "2023-10-13",
+    "image": "ecw_2023.webp",
+    "description": "L'ECW est une compétition de cybersécurité ayant lieu à Rennes et ouverte à tous, professionnels comme étudiants.",
+    "teams": []
+  },
+  {
+    "name": "TRACS",
+    "date": "2023-12-02",
+    "image": "tracs_2023.png",
+    "description": "TRACS est une compétition de data science, de sécurité et de cryptanalyse organisée conjointement par ViaRézo et la DGSE.",
+    "teams": [
+      {
+        "name": "Team DLS",
+        "members": ["Rettbl", "Miatak", "Prezident", "Maeyx", "ArKoo"]
+      }
+    ]
+  },
+  {
+    "name": "Hacklantique",
+    "date": "2024-03-09",
+    "image": "hacklantique_2024.jpeg",
+    "description": "CTF Jeorpardy de niveau débutant à intermédiaire, à visée pédagogique. Il erst organisé par 8 étudiants d'IMT Atlantique.",
+    "teams": [
+      {
+        "name": "Participants",
+        "members": [
+          "Rettbl",
+          "FearNyx",
+          "Minvinea",
+          "LooXzy",
+          "C0ne",
+          "Madore",
+          "CountZero",
+          "Tranos",
+          "Prezident",
+          "ArKoo",
+          "Arslan"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Breizh CTF",
+    "date": "2024-05-17",
+    "image": "breizhctf_2024.png",
+    "description": "12h de challenge pendant la nuit de vendredi à samedi ! C’est ce qui attend les 600 participants de l’édition 2024. Cet événement est ouvert à tous, professionnels, étudiants, passionnés ou curieux de sécurité informatique.",
+    "teams": [
+      {
+        "name": "FireFoxyFamily",
+        "members": ["Rettbl", "Maeyx", "miatak", "Foxy"]
+      },
+      {
+        "name": "Les Cyber Crackito",
+        "members": ["LooXzy", "Minvinea", "Tranos", "Madore", "C0ne"]
+      },
+      {
+        "name": "Les Samouraïs du clavier",
+        "members": ["Prezident", "ArKoo", "CountZero", "FearNyx", "Arslan"]
+      },
+      {
+        "name": "Team Crouton",
+        "members": ["AZOGg", "Clooope1", "Chokopounko", "BDM"]
+      },
+      {
+        "name": "TFG 2",
+        "members": ["Softomine", "Maïaou", "Sharp", "Phantom"]
+      }
+    ]
+  },
+  {
+    "name": "ECW",
+    "date": "2024-10-17",
+    "image": "ecw_2024.png",
+    "description": "Préqualifications du 17 au 27 Octobre, finale le 20 Novembre.",
+    "teams": []
+  }
+]
