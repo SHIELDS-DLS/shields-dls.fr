@@ -41,7 +41,7 @@
           <p class="text-white text-center text-lg mt-2">{{ project.promo }}</p>
         </div>
         <div class="flex-1 border-y border-gray-600 my-4">
-          <div class="overflow-auto h-40 p-4">
+          <div class="overflow-auto text-justify h-40 p-4">
             <p class="text-white">{{ project.description }}</p>
           </div>
         </div>
