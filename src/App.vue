@@ -7,15 +7,17 @@ import { RouterView } from "vue-router";
   <div id="background">
     <div
       id="content"
-      class="mt-32 max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8"
+      class="mt-48 max-w-screen-xl mx-auto min-h-screen px-4 sm:px-6 md:px-8"
     >
       <RouterView />
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -24,9 +26,3 @@ export default {
   },
 };
 </script>
-
-<style>
-html {
-  @apply bg-shields-content text-shields-txt;
-}
-</style>

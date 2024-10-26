@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto lg:p-8 p-4">
     <div
       v-for="pack in sortedPacks"
       :key="pack.name"
@@ -10,23 +10,21 @@
     >
       <!-- Bandeau supérieur -->
       <div
-        class="absolute top-0 left-0 right-0 flex items-center justify-between p-4 bg-shields-content z-10 border-b border-gray-600"
+        class="absolute top-0 left-0 right-0 flex items-center justify-between p-4 bg-shields-content z-3 border-b border-gray-600"
       >
         <h2 class="text-xl font-bold text-shields-txt text-center w-full">
-          Pack {{ pack.name }}
+          {{ pack.name }}
         </h2>
       </div>
 
       <!-- Section Prix -->
-      <div class="absolute top-16 left-0 right-0 p-4 text-center z-10">
-        <p class="text-3xl text-shields-txt font-semibold">
-          {{ pack.price }} €
-        </p>
+      <div class="absolute top-16 left-0 right-0 p-4 text-center">
+        <p class="text-3xl text-shields-txt font-mono">{{ pack.price }} €</p>
       </div>
 
       <!-- Section Items -->
       <div
-        class="absolute top-28 left-0 right-0 py-10 text-shields-txt overflow-auto z-10"
+        class="absolute top-28 left-0 right-0 py-10 text-shields-txt overflow-auto"
       >
         <div class="w-full h-full flex justify-center items-center">
           <table>
@@ -57,21 +55,22 @@
       <!-- Légende Choix -->
       <div
         v-if="pack.choice"
-        class="absolute bottom-20 left-0 right-0 text-center z-10"
+        class="absolute bottom-20 left-0 right-0 text-center"
       >
         <div class="inline-flex items-center pb-5">
           <LucideCheck class="text-yellow-500 w-6 h-6" />
           <span class="ml-1 text-sm text-shields-txt"
-            >Choisir parmi les options</span
+            >*Choisir parmi les options</span
           >
         </div>
       </div>
 
       <!-- Bouton Acheter -->
-      <div class="absolute bottom-8 left-0 right-0 text-center z-10">
+      <div class="absolute bottom-8 left-0 right-0 text-center">
         <a
           :href="pack.url"
-          class="inline-block px-10 py-3 bg-orange-500 border border-shields-txt text-shields-txt font-bold rounded-full shadow-lg hover:bg-orange-600 transition-colors duration-300"
+          target="_blank"
+          class="inline-block px-6 py-2 bg-orange-500 border border-shields-txt text-shields-txt font-bold rounded-full shadow-lg hover:bg-orange-600 transition-colors duration-300"
         >
           Acheter
         </a>

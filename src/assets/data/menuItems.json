@@ -1,0 +1,31 @@
+[
+  [
+    { "link": "/", "text": "Accueil" },
+    {
+      "link": "/presentation",
+      "text": "L'association",
+      "subitems": [
+        { "text": "Présentation", "link": "/presentation" },
+        { "text": "Adhérents", "link": "/members" }
+      ]
+    },
+    { "link": "/events", "text": "Événements" }
+  ],
+  [
+    {
+      "link": "/ctfs",
+      "text": "Compétitions",
+      "subitems": [
+        { "text": "CTFs", "link": "/ctfs" },
+        { "text": "Team DLS", "link": "/team-dls" },
+        { "text": "CTF Interne", "link": "https://ctf.polesup-delasalle.fr" }
+      ]
+    },
+    {
+      "link": "/projects/students",
+      "text": "Projets",
+      "subitems": [{ "text": "Étudiants", "link": "/projects/students" }]
+    },
+    { "link": "/shop", "text": "Boutique", "icon": "ShoppingCartIcon" }
+  ]
+]

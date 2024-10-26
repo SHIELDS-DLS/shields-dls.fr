@@ -1,5 +1,5 @@
 {
-  "name": "my-vue-app",
+  "name": "shields-dls",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "lucide-vue-next": "^0.445.0",
     "swiper": "^11.1.14",
     "vue": "^3.4.37",
@@ -22,6 +23,7 @@
     "postcss": "^8.4.47",
     "sass-embedded": "^1.79.4",
     "tailwindcss": "^3.4.12",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vite-svg-loader": "^5.1.0"
   }
 }

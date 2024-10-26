@@ -1,0 +1,40 @@
+[
+  {
+    "name": "QRGuard",
+    "year": "2023-2024",
+    "promo": "MSI2",
+    "description": " QRGuard est une application web conçue pour scanner les QR codes et évaluer leur sécurité instantanément : safe, warning ou danger. Face à la montée du phishing via QR codes (ou quishing), il était essentiel de proposer une solution simple et efficace pour protéger les utilisateurs au quotidien. L’objectif de QRGuard est de rendre l’utilisation des QR codes plus sûre en alertant des risques avant qu'ils ne soit trop tard. Accessible et facile à utiliser, l'application aide à adopter de bonnes pratiques de sécurité numérique.",
+    "image": "qrguard.png",
+    "members": ["AZOGg", "arl3cz"],
+    "linkedin": "https://www.linkedin.com/posts/stan-troufflard_opencti-opensource-activity-7211979103552368641-CjeG?utm_source=share&utm_medium=member_desktop",
+    "github": "https://github.com/OpenCTI-Platform/connectors/commit/17a90551c0c7fe5e74425d1be3e1696d1069a47a"
+  },
+  {
+    "name": "SABU",
+    "year": "2022-2024",
+    "promo": "BSI-MSI1",
+    "description": "SABU (Secure Against Bad USB Key) est un projet développé par trois étudiants en cybersécurité. Il s'agit d'une station blanche basée sur un modèle client-serveur, équipée de technologies avancées de détection de virus sur les clés USB. SABU vise à sécuriser les périphériques USB afin d'empêcher l'intrusion de logiciels malveillants susceptibles de compromettre les systèmes informatiques d'une entreprise.",
+    "image": "sabu.png",
+    "members": ["LooXzy", "Minvinea", "Tranos"],
+    "url": "https://sabu-ws.github.io/website/",
+    "github": "https://github.com/SABU-WS/"
+  },
+  {
+    "name": "Ansi'Box",
+    "year": "2023-2024",
+    "promo": "MSI2",
+    "description": "Exercice de gestion de crise cyber technique via des machines vulnérables.",
+    "image": "ansibox.png",
+    "members": ["Mantaloh", "Rettbl"],
+    "linkedin": "https://www.linkedin.com/posts/shields-dls_cette-ann%C3%A9e-les-%C3%A9tudiants-du-groupe-activity-7219813530261233665-EVYE?utm_source=share&utm_medium=member_desktop"
+  },
+  {
+    "name": "pipOSINT",
+    "year": "2023-2024",
+    "promo": "BSI",
+    "description": "pipOSINT consiste en une boîte à outils d'OSINT conteneurisée accessible via une interface web ou une API. Il embarque de nombreux outils englobant divers domaines, à savoir : Nom/Prénom, Email, Pseudo, Adresse IP, Numéro de téléphone, Nom de domaine, et enfin GEOINT.",
+    "image": "piposint.png",
+    "members": ["Prezident", "ArKoo", "ectolast"],
+    "github": "https://github.com/arkokoo/piposint"
+  }
+]

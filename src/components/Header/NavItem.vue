@@ -1,10 +1,17 @@
 <template>
-  <li>
-    <router-link
-      :to="link"
+  <li
+    @mouseover="showSubmenu = true"
+    @mouseleave="showSubmenu = false"
+    class="relative"
+  >
+    <component
+      :is="isExternal(link) ? 'a' : 'router-link'"
+      :to="!isExternal(link) ? link : null"
+      :href="isExternal(link) ? link : null"
+      :target="isExternal(link) ? '_blank' : null"
       :class="[
         'block py-2 px-3 text-shields-txt rounded md:p-0',
-        text === 'Team DLS'
+        text === 'Compétitions'
           ? 'md:hover:text-purple-500'
           : 'md:hover:text-orange-400',
         directionClass,
@@ -16,7 +23,32 @@
         class="icon"
       ></component>
       {{ text }}
-    </router-link>
+    </component>
+
+    <!-- Sous-menu, visible au survol -->
+    <transition name="fade">
+      <ul
+        v-if="subitems && subitems.length"
+        v-show="showSubmenu"
+        class="absolute left-0 w-48 mt-2 bg-shields-secondary shadow-lg border rounded z-10"
+      >
+        <li
+          v-for="(subitem, index) in subitems"
+          :key="index"
+          class="block hover:bg-shields-content"
+        >
+          <component
+            :is="isExternal(subitem.link) ? 'a' : 'router-link'"
+            :to="!isExternal(subitem.link) ? subitem.link : null"
+            :href="isExternal(subitem.link) ? subitem.link : null"
+            :target="isExternal(subitem.link) ? '_blank' : null"
+            class="block py-2 px-4 text-shields-txt hover:text-orange-400"
+          >
+            {{ subitem.text }}
+          </component>
+        </li>
+      </ul>
+    </transition>
   </li>
 </template>
 
@@ -29,10 +61,16 @@ import {
 
 export default {
   name: "NavItem",
+  components: {
+    HouseIcon,
+    PersonStandingIcon,
+    ShoppingCartIcon,
+  },
   props: {
     link: {
       type: String,
       required: true,
+      default: "",
     },
     text: {
       type: String,
@@ -46,6 +84,20 @@ export default {
       type: String,
       default: "left",
     },
+    subitems: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  data() {
+    return {
+      showSubmenu: false,
+    };
+  },
+  methods: {
+    isExternal(link) {
+      return link.startsWith("http");
+    },
   },
   computed: {
     directionClass() {
@@ -55,8 +107,6 @@ export default {
       switch (this.text) {
         case "Accueil":
           return HouseIcon;
-        case "Adhérents":
-          return PersonStandingIcon;
         case "Boutique":
           return ShoppingCartIcon;
         default:
@@ -69,11 +119,12 @@ export default {
 
 <style scoped>
 a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   position: relative;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .icon {
@@ -110,5 +161,18 @@ a::after {
   transform: scaleX(1);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+}
+
+/* Styles pour le sous-menu */
+ul {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
 }
 </style>

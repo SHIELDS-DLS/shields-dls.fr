@@ -1,14 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Actions from "../views/Actions.vue";
 import Shop from "../views/Shop.vue";
 import TeamDls from "../views/TeamDls.vue";
+import Presentation from "../views/Presentation.vue";
+import Events from "../views/Events.vue";
+import Projects from "../views/Projects.vue";
+import Members from "../views/Members.vue";
+import Ctfs from "../views/Ctfs.vue";
+import LegalNotices from "../views/LegalNotices.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
-  { path: "/nos-actions", name: "Actions", component: Actions },
-  { path: "/boutique", name: "Shop", component: Shop },
+  { path: "/presentation", name: "Presentation", component: Presentation },
+  { path: "/events", name: "Events", component: Events },
+  { path: "/members", name: "Members", component: Members },
+  { path: "/projects/students", name: "Projects", component: Projects },
+  { path: "/shop", name: "Shop", component: Shop },
   { path: "/team-dls", name: "TeamDls", component: TeamDls },
+  { path: "/ctfs", name: "Ctfs", component: Ctfs },
+  { path: "/legal", name: "LegalNotices", component: LegalNotices },
+  { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 
 const router = createRouter({

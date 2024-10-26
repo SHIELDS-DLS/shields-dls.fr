@@ -16,7 +16,7 @@
     >
       <!-- Bandeau supérieur -->
       <div
-        class="absolute top-0 left-0 right-0 flex items-center justify-between p-4 bg-shields-content z-10 border-b border-gray-600 rounded-t-lg"
+        class="absolute top-0 left-0 right-0 flex items-center justify-between p-4 bg-shields-content z-2 border-b border-gray-600 rounded-t-lg"
       >
         <h2 class="text-lg font-bold text-white">{{ competition.name }}</h2>
         <div class="flex items-center space-x-2">
@@ -58,7 +58,7 @@
   </div>
   <div
     v-if="isCompetitionInfosOpen"
-    class="fixed inset-0 z-50 bg-black bg-opacity-75 flex justify-center items-center p-4"
+    class="fixed inset-0 z-4 bg-black bg-opacity-75 flex justify-center items-center p-4"
     @click.self="closeCompetitionInfos"
   >
     <div

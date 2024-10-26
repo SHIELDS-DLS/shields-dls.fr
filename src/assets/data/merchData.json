@@ -21,16 +21,16 @@
     {
       "id": 1,
       "color": "#CD7F32",
-      "name": "Jet tag + Stickers",
-      "url": "https://www.google.com",
+      "name": "Starter Pack",
+      "url": " https://www.helloasso.com/associations/shields/boutiques/starter-pack",
       "price": 7.5,
       "items": [1, 2]
     },
     {
       "id": 2,
       "color": "#C0C0C0",
-      "name": "de Base",
-      "url": "https://www.google.com",
+      "name": "Advanced Pack",
+      "url": "https://www.helloasso.com/associations/shields/boutiques/advanced-pack",
       "price": 15,
       "items": [1, 2],
       "choice": [3, 4]
@@ -38,8 +38,8 @@
     {
       "id": 3,
       "color": "#FFD700",
-      "name": "Complet",
-      "url": "https://www.google.com",
+      "name": "Ultimate Pack",
+      "url": "https://www.helloasso.com/associations/shields/boutiques/ultimate-pack",
       "price": 20,
       "items": [1, 2, 3, 4]
     }

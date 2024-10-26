@@ -14,6 +14,9 @@ export default {
         "shields-txt-secondary": "#B0B0B0",
         "shields-optional": "#bb3e03",
       },
+      fontFamily: {
+        space_mono: ["Space Mono", "monospace"],
+      },
     },
   },
   plugins: [],

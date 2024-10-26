@@ -1,3 +1,16 @@
 @tailwind base;
+@layer base {
+  html {
+    @apply font-space_mono bg-shields-content text-shields-txt;
+  }
+}
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Space_Mono/SpaceMono-Regular.ttf") format("truetype");
+}
