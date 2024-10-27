@@ -11,7 +11,7 @@
           <div class="p-4 flex items-center">
             <img
               :src="
-                '/src/assets/images/posts/accounts/' +
+                '/images/posts/accounts/' +
                 postsData.accounts[post.account].icon
               "
               alt="icon"

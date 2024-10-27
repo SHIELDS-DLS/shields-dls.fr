@@ -13,14 +13,14 @@
   </div>
   <div id="goal" class="mb-20">
     <h1 class="text-3xl font-bold text-center mb-10">Notre objectif ?</h1>
-    <p class="text-lg text-justify mb-10">
+    <p class="text-lg lg:text-justify mb-10">
       <u>Dynamiser l'expérience académique :</u> Nous proposons une variété
       d'activités enrichissantes, qu'elles soient directement liées à la
       cybersécurité ou non. Ces initiatives permettent à nos membres de
       développer leurs compétences, d’explorer de nouveaux domaines et de
       s’épanouir personnellement et professionnellement.
     </p>
-    <p class="text-lg text-justify mb-10">
+    <p class="text-lg lg:text-justify mb-10">
       <u>Renforcer les liens inter-promotion :</u> Nous facilitons les
       interactions entre les différentes promotions de notre filière, notamment
       le Mastère en Sécurité Informatique (MSI), le Bachelor en Sécurité

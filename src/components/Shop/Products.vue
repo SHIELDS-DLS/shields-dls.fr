@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 gap-8">
         <div class="p-6 flex flex-col lg:flex-row items-center">
           <img
-            src="/src/assets/images/shop/mug.png"
+            src="/images/shop/mug.png"
             alt="Mug de l'association"
             class="w-32 transition-transform duration-200 transform hover:scale-110"
           />
@@ -18,7 +18,7 @@
 
         <div class="p-6 flex flex-col lg:flex-row-reverse items-center">
           <img
-            src="/src/assets/images/shop/t-shirt.png"
+            src="/images/shop/t-shirt.png"
             alt="T-shirt de l'association"
             class="w-32 transition-transform duration-200 transform hover:scale-110"
           />
@@ -32,7 +32,7 @@
 
         <div class="p-6 flex flex-col lg:flex-row items-center">
           <img
-            src="/src/assets/images/shop/sticker.png"
+            src="/images/shop/sticker.png"
             alt="Stickers de l'association"
             class="w-32 transition-transform duration-200 transform hover:scale-110"
           />
@@ -47,7 +47,7 @@
 
         <div class="p-6 flex flex-col lg:flex-row-reverse items-center">
           <img
-            src="/src/assets/images/shop/jet-tag.png"
+            src="/images/shop/jet-tag.png"
             alt="Jet tag de l'association"
             class="w-32 transition-transform duration-200 transform hover:scale-110"
           />

@@ -22,7 +22,7 @@
         <div class="flex-1 flex items-center justify-center max-h-48">
           <img
             v-if="project.image"
-            :src="'/src/assets/images/projects/' + project.image"
+            :src="'/images/projects/' + project.image"
             alt="Preview Image"
             class="max-w-32 max-h-32"
           />
@@ -41,7 +41,7 @@
           <p class="text-white text-center text-lg mt-2">{{ project.promo }}</p>
         </div>
         <div class="flex-1 border-y border-gray-600 my-4">
-          <div class="overflow-auto text-justify h-40 p-4">
+          <div class="overflow-auto lg:text-justify h-40 p-4">
             <p class="text-white">{{ project.description }}</p>
           </div>
         </div>
@@ -91,8 +91,8 @@ import {
   Calendar as LucideCalendar,
   SquareArrowOutUpRight as LucideExternalUrl,
 } from "lucide-vue-next";
-import LinkedInIcon from "/src/assets/images/icons/linkedin.svg";
-import GithubIcon from "/src/assets/images/icons/github.svg";
+import LinkedInIcon from "/src/assets/icons/linkedin.svg";
+import GithubIcon from "/src/assets/icons/github.svg";
 
 export default {
   name: "StudentProjects",

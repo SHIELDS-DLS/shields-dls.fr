@@ -42,7 +42,7 @@
         <div class="flex-1 flex items-center justify-center py-5">
           <img
             v-if="competition.image"
-            :src="'/src/assets/images/competitions/' + competition.image"
+            :src="'/images/competitions/' + competition.image"
             alt="Preview Image"
             class="max-w-36 max-h-32"
           />

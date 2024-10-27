@@ -24,11 +24,7 @@
           to="/"
           class="absolute left-1/2 transform -translate-x-1/2 top-1"
         >
-          <img
-            src="../assets/images/shields.svg"
-            class="h-24"
-            alt="Shields Logo"
-          />
+          <ShieldsLogo class="h-24" alt="Shields Logo" />
         </router-link>
 
         <!-- Right navigation -->
@@ -98,14 +94,17 @@
 </template>
 
 <script>
+import ShieldsLogo from "/src/assets/icons/shields.svg";
 import NavItem from "/src/components/Header/NavItem.vue";
 import NavItemMobile from "./Header/NavItemMobile.vue";
 import TipAlert from "./Header/TipAlert.vue";
 import menuItems from "/src/assets/data/menuItems.json";
+import { Shield } from "lucide-vue-next";
 
 export default {
   name: "Header",
   components: {
+    ShieldsLogo,
     NavItem,
     NavItemMobile,
     TipAlert,

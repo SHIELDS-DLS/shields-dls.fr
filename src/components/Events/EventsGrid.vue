@@ -33,12 +33,21 @@
       <div class="absolute top-16 left-0 right-0 bottom-0">
         <img
           v-if="event.photos[0]"
-          :src="'/src/assets/images/events/' + event.photos[0]"
+          :src="'/images/events/' + event.photos[0]"
           alt="Preview Image"
           class="w-full h-full object-cover cursor-pointer"
           @click="openCarousel(event.photos)"
         />
-        <div v-else class="w-full h-full bg-shields-secondary"></div>
+        <div
+          v-else
+          class="w-full h-full bg-shields-secondary flex items-center justify-center"
+        >
+          <LucideCameraOff
+            v-if="getDaysLeft(event.date) === 0"
+            class="w-12 h-12 text-shields-txt-secondary"
+          />
+          <LucideClock v-else class="w-12 h-12 text-shields-txt-secondary" />
+        </div>
       </div>
     </div>
   </div>
@@ -60,7 +69,7 @@
     >
       <SwiperSlide v-for="(photo, index) in currentPhotos" :key="index">
         <img
-          :src="'/src/assets/images/events/' + photo"
+          :src="'/images/events/' + photo"
           class="w-full h-4/5 object-cover"
         />
       </SwiperSlide>
@@ -70,7 +79,11 @@
 
 <script>
 import { getDaysLeft } from "/src/utils/dateUtils";
-import { Calendar as LucideCalendar } from "lucide-vue-next";
+import {
+  Calendar as LucideCalendar,
+  Clock as LucideClock,
+  CameraOff as LucideCameraOff,
+} from "lucide-vue-next";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import events from "/src/assets/data/events.json";
 
@@ -83,6 +96,8 @@ export default {
   name: "EventsGrid",
   components: {
     LucideCalendar,
+    LucideClock,
+    LucideCameraOff,
     Swiper,
     SwiperSlide,
   },

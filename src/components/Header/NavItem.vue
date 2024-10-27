@@ -42,7 +42,12 @@
             :to="!isExternal(subitem.link) ? subitem.link : null"
             :href="isExternal(subitem.link) ? subitem.link : null"
             :target="isExternal(subitem.link) ? '_blank' : null"
-            class="block py-2 px-4 text-shields-txt hover:text-orange-400"
+            class="block py-2 px-4 text-shields-txt"
+            :class="
+              text === 'Compétitions'
+                ? 'md:hover:text-purple-500'
+                : 'md:hover:text-orange-400'
+            "
           >
             {{ subitem.text }}
           </component>
