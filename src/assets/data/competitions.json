@@ -76,5 +76,17 @@
     "image": "ecw_2024.png",
     "description": "Préqualifications du 17 au 27 Octobre, finale le 20 Novembre.",
     "teams": []
+  },
+  {
+    "name": "HeroCTF",
+    "date": "2024-10-25",
+    "image": "heroctf_2024.png",
+    "description": "6ème édition du HeroCTF. C'est une compétition de cybersécurité en ligne pour débutants et intermédiaires.",
+    "teams": [
+      {
+        "name": "Les Cyber Crackito",
+        "members": ["LooXzy", "Minvinea", "Tranos"]
+      }
+    ]
   }
 ]
