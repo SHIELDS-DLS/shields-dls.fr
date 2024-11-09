@@ -55,7 +55,7 @@
   <!-- Swiper Carousel -->
   <div
     v-if="isCarouselOpen"
-    class="fixed inset-0 z-20 bg-black bg-opacity-75 flex justify-center items-center"
+    class="fixed inset-0 z-20 bg-black bg-opacity-75 flex justify-center items-center h-screen w-screen"
     @click.self="closeCarousel"
   >
     <Swiper
@@ -67,10 +67,14 @@
       :grabCursor="true"
       :pagination="pagination"
     >
-      <SwiperSlide v-for="(photo, index) in currentPhotos" :key="index">
+      <SwiperSlide
+        v-for="(photo, index) in currentPhotos"
+        :key="index"
+        @click="closeCarousel"
+      >
         <img
           :src="'/images/events/' + photo"
-          class="w-full h-4/5 object-cover"
+          class="w-full h-full object-cover"
         />
       </SwiperSlide>
     </Swiper>
@@ -151,14 +155,28 @@ export default {
 }
 
 .swiper {
-  max-width: 900px;
-  max-height: 80%;
+  max-width: 90vw;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  margin: auto;
 }
 
 .swiper-pagination-bullet {
