@@ -88,5 +88,23 @@
         "members": ["LooXzy", "Minvinea", "Tranos"]
       }
     ]
+  },
+  {
+    "name": "Root Me Pro Edu",
+    "date": "2024-11-08",
+    "image": "rmp.png",
+    "description": "2ème édition de cette compétition de cybersécurité inter-écoles basée sur le parcours Root-Me Pro EDU.",
+    "teams": [
+      {
+        "name": "Team DLS",
+        "members": ["Shyphem", "erace", "Liliang", "Honyzey", "Margaux"]
+      }
+    ]
+  },
+  {
+    "name": "Breizh CTF",
+    "date": "2025-03-15",
+    "image": "breizhctf_2025.png",
+    "description": "De 9h à 19h, 600 participants en provenance de toute la France sont attendus à la compétition pour tenter de résoudre les épreuves imaginées par deux spécialistes de la cybersécurité."
   }
 ]

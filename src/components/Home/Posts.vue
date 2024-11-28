@@ -14,7 +14,7 @@
                 '/images/posts/accounts/' +
                 postsData.accounts[post.account].icon
               "
-              alt="icon"
+              alt=""
               class="w-10 h-10 rounded-full mr-4"
             />
             <div>
@@ -29,8 +29,8 @@
           </div>
           <img
             v-if="post.image"
-            :src="post.image"
-            alt="post photo"
+            :src="'/images/posts/' + post.image"
+            alt=""
             class="w-full h-64 object-cover"
           />
           <div v-else class="w-full h-64 bg-shields-txt"></div>
