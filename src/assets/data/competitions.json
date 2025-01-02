@@ -106,5 +106,10 @@
     "date": "2025-03-15",
     "image": "breizhctf_2025.png",
     "description": "De 9h à 19h, 600 participants en provenance de toute la France sont attendus à la compétition pour tenter de résoudre les épreuves imaginées par deux spécialistes de la cybersécurité."
+  },
+  {
+    "name": "leHACK Wargame",
+    "date": "2025-06-28",
+    "description": "Le wargame de leHACK est une compétition ouverte qui a lieu le dernier soir du salon."
   }
 ]
