@@ -63,5 +63,10 @@
     "name": "Bar de Noël",
     "date": "2024-12-12",
     "photos": ["NOEL_2024/1.jpg"]
+  },
+  {
+    "name": "Soirée Jeux",
+    "date": "2025-02-02",
+    "photos": []
   }
 ]
