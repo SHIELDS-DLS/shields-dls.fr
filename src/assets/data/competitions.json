@@ -19,7 +19,7 @@
     ]
   },
   {
-    "name": "Hacklantique",
+    "name": "Hack'lantique",
     "date": "2024-03-09",
     "image": "hacklantique_2024.jpeg",
     "description": "CTF Jeorpardy de niveau débutant à intermédiaire, à visée pédagogique. Il erst organisé par 8 étudiants d'IMT Atlantique.",
@@ -102,14 +102,53 @@
     ]
   },
   {
+    "name": "Hack'lantique",
+    "date": "2025-03-08",
+    "image": "hacklantique_2024.jpeg",
+    "description": "CTF Jeorpardy de niveau débutant à intermédiaire, à visée pédagogique. Il erst organisé par des étudiants d'IMT Atlantique.",
+    "teams": [
+      {
+        "name": "Participants",
+        "members": ["ArKoo", "CountZero", "FearNyx", "IMMERGO", "Prezident"]
+      },
+      {
+        "name": "Flag Busters",
+        "members": ["erace", "Shyphem", "Leousse", "Lyliang29", "Niigalo"]
+      }
+    ]
+  },
+  {
     "name": "Breizh CTF",
     "date": "2025-03-15",
     "image": "breizhctf_2025.png",
-    "description": "De 9h à 19h, 600 participants en provenance de toute la France sont attendus à la compétition pour tenter de résoudre les épreuves imaginées par deux spécialistes de la cybersécurité."
+    "description": "De 9h à 19h, 600 participants en provenance de toute la France sont attendus à la compétition pour tenter de résoudre les épreuves imaginées par deux spécialistes de la cybersécurité.",
+    "teams": [
+      {
+        "name": "Les Cyber Crackito",
+        "members": ["LooXzy", "Minvinea", "Tranos", "Madore", "C0ne"]
+      },
+      {
+        "name": "Participants",
+        "members": ["Prezident", "ArKoo", "CountZero", "FearNyx", "IMMERGO"]
+      },
+      {
+        "name": "Flag Busters",
+        "members": ["Shyphem", "erace", "Leousse", "Lyliang29", "Ageom"]
+      },
+      {
+        "name": "BoberJager",
+        "members": ["Pupuce", "709cn", "Wao", "Zentrax", "BDM"]
+      },
+      {
+        "name": "NoName",
+        "members": ["CZ3R0", "Fl1pp3r", "0hCrime", "Manqui1", "Araiguma"]
+      }
+    ]
   },
   {
     "name": "leHACK Wargame",
     "date": "2025-06-28",
+    "image": "lehack_wargame_2025.png",
     "description": "Le wargame de leHACK est une compétition ouverte qui a lieu le dernier soir du salon."
   }
 ]
