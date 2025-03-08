@@ -24,6 +24,13 @@
   "posts": [
     {
       "account": "shields",
+      "date": "2025-03-08",
+      "image": "2025/annonce_breizhctf2025.png",
+      "description": "🟠 ⚫ 🚀 J-7 avant le BreizhCTF 2025 ! 🔥",
+      "url": "https://www.linkedin.com/posts/shields-dls_breizhctf-ctf-cybersaezcuritaez-activity-7304093595068755968-jrlS?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      "account": "shields",
       "date": "2025-02-01",
       "image": "2025/soiree_jeux.jpg",
       "description": "🟠 ⚫ Merci aux participants de la soirée jeux de société et galette des rois organisée par SHIELDS DLS ! 🎲 👑",
