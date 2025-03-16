@@ -121,7 +121,7 @@
     "name": "Breizh CTF",
     "date": "2025-03-15",
     "image": "breizhctf_2025.png",
-    "description": "De 9h à 19h, 600 participants en provenance de toute la France sont attendus à la compétition pour tenter de résoudre les épreuves imaginées par deux spécialistes de la cybersécurité.",
+    "description": "De 10h à 18h, 600 participants en provenance de toute la France sont attendus à la compétition pour tenter de résoudre les épreuves imaginées par deux spécialistes de la cybersécurité.",
     "teams": [
       {
         "name": "Les Cyber Crackito",
@@ -140,7 +140,7 @@
         "members": ["Pupuce", "709cn", "Wao", "Zentrax", "BDM"]
       },
       {
-        "name": "NoName",
+        "name": "BSI4Hack",
         "members": ["CZ3R0", "Fl1pp3r", "0hCrime", "Manqui1", "Araiguma"]
       }
     ]
