@@ -23,6 +23,13 @@
   },
   "posts": [
     {
+      "account": "team-dls",
+      "date": "2025-03-16",
+      "image": "2025/breizhctf2025.jpeg",
+      "description": "🟣 ⚫ BreizhCTF 2025 👨‍💻 Ce samedi 14 mars, la 9ᵉ édition du BreizhCTF a rassemblé 600 passionnés de cybersécurité venus de toute la France pour s’affronter pendant 8 heures sur des challenges toujours plus exigeants. 🔥 ",
+      "url": "https://www.linkedin.com/posts/team-dls_ctf-breizhctf-challenges-activity-7307140003959111680-Khzf?utm_source=share&utm_medium=member_desktop"
+    },
+    {
       "account": "shields",
       "date": "2025-03-14",
       "image": "2025/hack&teens2025.jpeg",
