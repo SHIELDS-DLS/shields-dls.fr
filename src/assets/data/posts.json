@@ -24,6 +24,20 @@
   "posts": [
     {
       "account": "shields",
+      "date": "2025-03-14",
+      "image": "2025/hack&teens2025.jpeg",
+      "description": "🟠 ⚫ Fin de la première partie du BreizhCTF avec le Hack&Teens !",
+      "url": "https://www.linkedin.com/posts/shields-dls_ctf-breizhctf-challenges-activity-7306432116576169984-e_3c?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      "account": "team-dls",
+      "date": "2025-03-10",
+      "image": "2025/hacklantique2025.jpeg",
+      "description": "🟣 ⚫ Hack'Lantique 2025 🚩 👨‍💻 Le samedi 8 mars 2025, nos étudiants ont participé au CTF de l'IMT Atlantique !",
+      "url": "https://www.linkedin.com/posts/team-dls_ctf-hacklantique-activity-7304788153976979458-2PIt?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      "account": "shields",
       "date": "2025-03-08",
       "image": "2025/annonce_breizhctf2025.png",
       "description": "🟠 ⚫ 🚀 J-7 avant le BreizhCTF 2025 ! 🔥",
