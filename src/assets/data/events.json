@@ -68,5 +68,15 @@
     "name": "Soirée Jeux",
     "date": "2025-01-29",
     "photos": ["JEUX_2025/1.jpg", "JEUX_2025/2.jpg"]
+  },
+  {
+    "name": "Soirée au bar",
+    "date": "2025-03-05",
+    "photos": []
+  },
+  {
+    "name": "Soirée talk sur les métiers de la cyber",
+    "date": "2025-03-26",
+    "photos": ["TALK_METIER_CYBER/talk-metier-cyber1.jpg", "TALK_METIER_CYBER/talk-metier-cyber2.jpg"]
   }
 ]
