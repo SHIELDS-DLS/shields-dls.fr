@@ -1,5 +1,62 @@
 [
   {
+    "name": "Hack'lantique",
+    "date": "2023-03-11",
+    "image": "hacklantique_2024.jpeg",
+    "description": "CTF Jeorpardy de niveau débutant à intermédiaire, à visée pédagogique. Il erst organisé par 8 étudiants d'IMT Atlantique.",
+    "teams": [
+      {
+        "name": "Team DLS",
+        "members": [
+          "LooXzy",
+          "Minvinea",
+          "Tranos",
+          "CountZero",
+          "Prezident"
+        ]
+      },
+      {
+        "name": "JeSappelleRoot",
+        "members": [
+          "BDM",
+          "Arl",
+          "Bizi",
+          "Foxy",
+          "Romain G"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Breizh CTF",
+    "date": "2024-03-17",
+    "image": "breizhctf_2023.png",
+    "description": "12h de challenge attendent les participants de l’édition 2023. Cet événement est ouvert à tous, professionnels, étudiants, passionnés ou curieux de sécurité informatique."
+  },
+  {
+    "name": "European Cyber Cup",
+    "date": "2023-04-05",
+    "image": "EC2_2023.png",
+    "description": "L’European Cyber Cup est la première compétition de hacking éthique reprenant les codes du eSport. Elle a pour objectifs de mettre en valeur les métiers et compétences de la cybersécurité opérationnelle grâce à une compétition gamifiée.",
+    "teams": [
+      {
+        "name": "Team DLS",
+        "members": [
+          "Thomas",
+          "_nothereforwork_",
+          "Whiterose",
+          "BDM",
+          "OncleSmacks",
+          "Sulli",
+          "Arl",
+          "Bizi",
+          "LooXzy",
+          "Minvinea"
+        ]
+      }
+    ]
+  },
+  {
     "name": "ECW",
     "date": "2023-10-13",
     "image": "ecw_2023.webp",
@@ -69,6 +126,12 @@
         "members": ["Softomine", "Maïaou", "Sharp", "Phantom"]
       }
     ]
+  },
+  {
+    "name": "leHACK Wargame",
+    "date": "2024-12-06",
+    "image": "lehack_wargame_2025.png",
+    "description": "Le wargame de leHACK est une compétition ouverte qui a lieu le dernier soir du salon."
   },
   {
     "name": "ECW",
@@ -142,6 +205,22 @@
       {
         "name": "BSI4Hack",
         "members": ["CZ3R0", "Fl1pp3r", "0hCrime", "Manqui1", "Araiguma"]
+      }
+    ]
+  },
+  {
+    "name": "Hack’N Game",
+    "date": "2025-04-04",
+    "image": "logo-digital-games.png",
+    "description": "Le Hack'N Game est un événement de type Capture The Flag dédié aux élèves des filières professionnelles CIEL (BAC/BTS) et SIO. Organisé par Root-Me PRO",
+    "teams": [
+      {
+        "name": "Participants",
+        "members": [
+          "erace",
+          "Shyphem",
+          "Leousse"
+        ]
       }
     ]
   },
