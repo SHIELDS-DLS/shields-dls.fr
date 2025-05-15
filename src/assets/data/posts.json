@@ -31,6 +31,13 @@
     },
     {
       "account": "team-dls",
+      "date": "2025-04-04",
+      "image": "2025/finale_hack'n-game.jpeg",
+      "description": "🟣 ⚫ Félicitations aux étudiants de la Team DLS pour avoir remporté le Hack’N Game organisé par Root-Me PRO 🏆🥇 !",
+      "url": "https://www.linkedin.com/posts/team-dls_rootmepro-digitalgames92-hautsdeseinedigitalgames-activity-7314635814821384192-syvp?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      "account": "team-dls",
       "date": "2025-03-16",
       "image": "2025/breizhctf2025.jpeg",
       "description": "🟣 ⚫ BreizhCTF 2025 👨‍💻 Ce samedi 14 mars, la 9ᵉ édition du BreizhCTF a rassemblé 600 passionnés de cybersécurité",
@@ -98,41 +105,6 @@
       "image": "2024/defhack.jpg",
       "description": "🟣⚫ Lors de l'exercice #DefHack 2024, les étudiants de 4ème année ont subi une gestion de crise cyber !",
       "url": "https://www.linkedin.com/posts/team-dls_defhack-cyber-comcyber-activity-7251576391714902016-Ly8w?utm_source=share&utm_medium=member_desktop"
-    },
-    {
-      "account": "shields",
-      "date": "2024-07-11",
-      "image": "2024/lehack.jpg",
-      "description": "🟠⚫ Cette année, les étudiants du Groupe Saint Jean étaient présents à leHACK pour la 20ème édition !",
-      "url": "https://www.linkedin.com/posts/shields-dls_cette-ann%C3%A9e-les-%C3%A9tudiants-du-groupe-activity-7219813530261233665-EVYE?utm_source=share&utm_medium=member_desktop"
-    },
-    {
-      "account": "lmsys",
-      "date": "2024-05-31",
-      "image": "2024/ctfpizza_lmsys.jpg",
-      "description": "🍕🔒 𝗥𝗲𝘁𝗼𝘂𝗿 𝘀𝘂𝗿 𝗹𝗲 𝗖𝗧𝗙 𝗣𝗶𝘇𝘇𝗮𝘀 𝗰𝗵𝗲𝘇 𝗟𝗠𝗦𝗬𝗦 ! 🔒🍕 📣 Nous avons eu le plaisir d’accueillir jeudi dernier dans nos locaux",
-      "url": "https://www.linkedin.com/posts/lmsys_ctf-cybersaezcuritaez-shields-activity-7204502845004365825-bTfN?utm_source=share&utm_medium=member_desktop"
-    },
-    {
-      "account": "groupesaintjean",
-      "date": "2024-05-17",
-      "image": "2024/minictf_breizh.jpg",
-      "description": "BREIZH CTF 2024 : retour sur le plus grand CTF de France !",
-      "url": "https://www.linkedin.com/posts/groupe-saintjean_informatique-et-cyber-p%C3%B4le-sup-et-cfa-ugcPost-7199355089185034240-Byl4?utm_source=share&utm_medium=member_desktop"
-    },
-    {
-      "account": "shields",
-      "date": "2024-03-09",
-      "image": "2024/hacklantique.jpg",
-      "description": "🟠⚫ Le samedi 09 mars 2024, nos étudiants ont participé au CTF d'IMT Atlantique : Hack'lantique 2k24 ! 🤩",
-      "url": "https://www.linkedin.com/posts/shields-dls_le-samedi-09-mars-2024-nos-%C3%A9tudiants-activity-7176214331288621056-b21x?utm_source=share&utm_medium=member_desktop"
-    },
-    {
-      "account": "shields",
-      "date": "2023-10-24",
-      "image": "2023/ctfpizza_1.jpg",
-      "description": "🟠⚫️ Après l’effort du Marathon Vert pour certains, un réconfort a eu lieu",
-      "url": "https://www.linkedin.com/posts/shields-dls_cyber-ctf-shields-activity-7127632770255712256-bVqP?utm_source=share&utm_medium=member_desktop"
     }
   ]
 }
