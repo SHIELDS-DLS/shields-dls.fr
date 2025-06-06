@@ -24,10 +24,17 @@
   "posts": [
     {
       "account": "shields",
-      "date": "2025-03-27",
-      "image": "2025/talk-metier-cyber1.jpg",
-      "description": "🟠⚫️ Retour sur la soirée talk sur les métiers de la cyber ! 🔐",
-      "url": "https://www.linkedin.com/posts/shields-dls_dls-cyber-activity-7311357470105370625-cibx?utm_source=share&utm_medium=member_desktop"
+      "date": "2025-06-06",
+      "image": "2025/gdc-msi2.jpg",
+      "description": "🔐 Retour sur une semaine intense en cybersécurité ! Cette semaine, nos étudiants de dernière année ont pris part à un exercice de gestion de crise cyber",
+      "url": "https://www.linkedin.com/posts/shields-dls_cybersaezcuritaez-gestiondecrise-exercicecyber-activity-7336802041861742592-JRMq?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      "account": "shields",
+      "date": "2025-06-03",
+      "image": "2025/eva-game.jpg",
+      "description": "🔫🥽 Retour sur notre activité cohésion de mai : EVA - Battle Arena !",
+      "url": "https://www.linkedin.com/posts/shields-dls_cyber-dls-shields-activity-7335585812752818176-5t1I?utm_source=share&utm_medium=member_desktop"
     },
     {
       "account": "team-dls",
@@ -35,6 +42,13 @@
       "image": "2025/finale_hack'n-game.jpeg",
       "description": "🟣 ⚫ Félicitations aux étudiants de la Team DLS pour avoir remporté le Hack’N Game organisé par Root-Me PRO 🏆🥇 !",
       "url": "https://www.linkedin.com/posts/team-dls_rootmepro-digitalgames92-hautsdeseinedigitalgames-activity-7314635814821384192-syvp?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      "account": "shields",
+      "date": "2025-03-27",
+      "image": "2025/talk-metier-cyber1.jpg",
+      "description": "🟠⚫️ Retour sur la soirée talk sur les métiers de la cyber ! 🔐",
+      "url": "https://www.linkedin.com/posts/shields-dls_dls-cyber-activity-7311357470105370625-cibx?utm_source=share&utm_medium=member_desktop"
     },
     {
       "account": "team-dls",
@@ -91,20 +105,6 @@
       "image": "2024/lasergame.jpg",
       "description": "🟠⚫ Les membres de SHIELDS ont laissé de côté claviers et écrans le temps d'un laser game intense !",
       "url": "https://www.linkedin.com/posts/shields-dls_les-membres-de-shields-ont-laiss%C3%A9-de-activity-7261645124407889920-q9-H?utm_source=share&utm_medium=member_desktop"
-    },
-    {
-      "account": "shields",
-      "date": "2024-10-30",
-      "image": "2024/nouveau_site.jpg",
-      "description": "🟠⚫ Le site de SHIELDS fait peau neuve ! Vous y retrouverez toutes les informations sur",
-      "url": "https://www.linkedin.com/posts/shields-dls_le-site-de-shields-fait-peau-neuve-activity-7257359208453435393-PnQi?utm_source=share&utm_medium=member_desktop"
-    },
-    {
-      "account": "team-dls",
-      "date": "2024-10-14",
-      "image": "2024/defhack.jpg",
-      "description": "🟣⚫ Lors de l'exercice #DefHack 2024, les étudiants de 4ème année ont subi une gestion de crise cyber !",
-      "url": "https://www.linkedin.com/posts/team-dls_defhack-cyber-comcyber-activity-7251576391714902016-Ly8w?utm_source=share&utm_medium=member_desktop"
     }
   ]
 }
