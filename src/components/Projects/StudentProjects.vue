@@ -86,13 +86,13 @@
 </template>
 
 <script>
-import projectsData from "/src/assets/data/projects.json";
+import projectsData from "@/assets/data/projects.json";
 import {
   Calendar as LucideCalendar,
   SquareArrowOutUpRight as LucideExternalUrl,
 } from "lucide-vue-next";
-import LinkedInIcon from "/src/assets/icons/linkedin.svg";
-import GithubIcon from "/src/assets/icons/github.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
+import GithubIcon from "@/assets/icons/github.svg";
 
 export default {
   name: "StudentProjects",

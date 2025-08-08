@@ -7,23 +7,11 @@
     "teams": [
       {
         "name": "Team DLS",
-        "members": [
-          "LooXzy",
-          "Minvinea",
-          "Tranos",
-          "CountZero",
-          "Prezident"
-        ]
+        "members": ["LooXzy", "Minvinea", "Tranos", "CountZero", "Prezident"]
       },
       {
         "name": "JeSappelleRoot",
-        "members": [
-          "BDM",
-          "Arl",
-          "Bizi",
-          "Foxy",
-          "Romain G"
-        ]
+        "members": ["BDM", "Arl", "Bizi", "Foxy", "Romain G"]
       }
     ]
   },
@@ -216,11 +204,7 @@
     "teams": [
       {
         "name": "Participants",
-        "members": [
-          "erace",
-          "Shyphem",
-          "Leousse"
-        ]
+        "members": ["erace", "Shyphem", "Leousse"]
       }
     ]
   },

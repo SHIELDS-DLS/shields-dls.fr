@@ -59,14 +59,14 @@ export default {
       try {
         const response = await fetch(
           "https://api.helloasso.com/oauth2/token",
-          options
+          options,
         );
         const data = await response.json();
         this.accessToken = data.access_token;
       } catch (error) {
         console.error(
           "Erreur lors de la récupération du token d'accès:",
-          error
+          error,
         );
       }
     },
@@ -87,7 +87,7 @@ export default {
       try {
         const response = await fetch(
           "https://api.helloasso.com/v5/organizations/shields/forms/Membership/adhesion-shields-2025/orders?pageIndex=1&pageSize=40&withDetails=true",
-          options
+          options,
         );
         const data = await response.json();
 

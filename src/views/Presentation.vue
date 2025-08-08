@@ -51,8 +51,8 @@
 </template>
 
 <script>
-import AdhesionPing from "../components/Home/AdhesionPing.vue";
-import teamData from "/src/assets/data/team.json";
+import AdhesionPing from "@/components/Home/AdhesionPing.vue";
+import teamData from "@/assets/data/team.json";
 
 export default {
   name: "Presentation",

@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import merchData from "/src/assets/data/merchData.json";
+import merchData from "@/assets/data/merchData.json";
 import { X as LucideX, Check as LucideCheck } from "lucide-vue-next";
 
 export default {

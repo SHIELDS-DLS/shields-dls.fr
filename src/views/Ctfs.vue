@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Competitions from "/src/components/TeamDls/Competitions.vue";
+import Competitions from "@/components/TeamDls/Competitions.vue";
 
 export default {
   name: "Ctfs",

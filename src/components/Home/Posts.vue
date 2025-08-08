@@ -68,8 +68,8 @@
 </template>
 
 <script>
-import postsData from "/src/assets/data/posts.json";
-import { getElapsedTime } from "/src/utils/dateUtils";
+import postsData from "@/assets/data/posts.json";
+import { getElapsedTime } from "@/utils/dateUtils";
 
 export default {
   name: "Posts",

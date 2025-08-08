@@ -3,10 +3,18 @@
  * @param {string} date - La date.
  * @returns {number} - Le nombre de jours restants.
  */
-export function getDaysLeft(date) {
+export interface GetDaysLeftParams {
+  date: string;
+}
+
+export interface GetDaysLeftResult {
+  daysLeft: number;
+}
+
+export function getDaysLeft(date: string): number {
   const today = new Date();
   const competitionDate = new Date(date);
-  const diffTime = competitionDate - today;
+  const diffTime = competitionDate.getTime() - today.getTime();
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   return diffDays > 0 ? diffDays : 0;
 }
@@ -16,10 +24,15 @@ export function getDaysLeft(date) {
  * @param {string} date - La date.
  * @returns {Object} - Le temps écoulé et son type.
  */
-export function getElapsedTime(date) {
+export interface ElapsedTime {
+  time: number;
+  type: "jour" | "jours" | "mois" | "an" | "ans";
+}
+
+export function getElapsedTime(date: string): ElapsedTime {
   const today = new Date();
   const competitionDate = new Date(date);
-  const diffTime = today - competitionDate;
+  const diffTime = today.getTime() - competitionDate.getTime();
 
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
   const diffMonths = Math.floor(diffDays / 30.44); // Utiliser une moyenne pour les mois

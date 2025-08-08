@@ -35,7 +35,6 @@
             :link="item.link"
             :text="item.text"
             :subitems="item.subitems"
-            :icon="item.icon"
             direction="left"
           />
         </ul>
@@ -93,33 +92,19 @@
   </transition>
 </template>
 
-<script>
-import ShieldsLogo from "/src/assets/icons/shields.svg";
-import NavItem from "/src/components/Header/NavItem.vue";
-import NavItemMobile from "./Header/NavItemMobile.vue";
-import TipAlert from "./Header/TipAlert.vue";
-import menuItems from "/src/assets/data/menuItems.json";
-import { Shield } from "lucide-vue-next";
+<script setup lang="ts">
+import { ref } from "vue";
+import ShieldsLogo from "@/assets/icons/shields.svg";
+import NavItem from "@/components/Header/NavItem.vue";
+import NavItemMobile from "@/components/Header/NavItemMobile.vue";
+import TipAlert from "@/components/Header/TipAlert.vue";
+import menuItems from "@/assets/data/menuItems.json";
 
-export default {
-  name: "Header",
-  components: {
-    ShieldsLogo,
-    NavItem,
-    NavItemMobile,
-    TipAlert,
-  },
-  data() {
-    return {
-      isMenuOpen: false,
-      menuItems,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-    },
-  },
+defineOptions({ name: "Header" });
+
+const isMenuOpen = ref(false);
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
 };
 </script>
 

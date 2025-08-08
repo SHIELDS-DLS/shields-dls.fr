@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Products from "../components/Shop/Products.vue";
-import Merch from "/src/components/Shop/Merch.vue";
+import Products from "@/components/Shop/Products.vue";
+import Merch from "@/components/Shop/Merch.vue";
 
 export default {
   name: "Shop",

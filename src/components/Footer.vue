@@ -71,9 +71,9 @@
 </template>
 
 <script>
-import InstagramIcon from "/src/assets/icons/instagram.svg";
-import XIcon from "/src/assets/icons/x.svg";
-import LinkedInIcon from "/src/assets/icons/linkedin.svg";
+import InstagramIcon from "@/assets/icons/instagram.svg";
+import XIcon from "@/assets/icons/x.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
 
 export default {
   name: "Footer",

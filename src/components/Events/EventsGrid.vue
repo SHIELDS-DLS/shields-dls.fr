@@ -1,150 +1,178 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-    <div
-      v-for="event in sortedevents"
-      :key="event.name"
-      id="eventItem"
-      class="relative bg-shields-secondary rounded-lg shadow-lg h-64 w-full overflow-hidden transition-transform duration-300 ease-in-out border border-gray-600"
-    >
-      <!-- Bandeau supérieur -->
-      <div
-        class="absolute top-0 left-0 right-0 flex items-center justify-between p-4 bg-shields-content z-10 border-b border-gray-600 rounded-t-lg"
+  <!-- Groupes par année scolaire -->
+  <div v-for="group in groupedYears" :key="group.label" class="mb-8">
+    <div class="flex items-center justify-between mb-4 px-2">
+      <h2 class="text-xl font-bold text-white">Année {{ group.label }}</h2>
+      <!-- Toggle uniquement pour les années passées -->
+      <button
+        v-if="!group.isCurrent"
+        class="flex items-center gap-2 text-shields-txt-secondary hover:text-white transition-colors"
+        @click="toggleYear(group.label)"
       >
-        <h2 class="text-lg font-bold text-white">{{ event.name }}</h2>
-        <div class="flex items-center space-x-2">
-          <LucideCalendar class="w-5 h-5 text-shields-txt-secondary" />
-          <p
-            :class="{
-              'text-orange-400': getDaysLeft(event.date) === 0,
-              'text-green-400': getDaysLeft(event.date) !== 0,
-            }"
-          >
-            {{
-              getDaysLeft(event.date) === 0
-                ? new Date(event.date).toLocaleDateString("fr-FR")
-                : getDaysLeft(event.date) === 1
-                ? "dans 1 jour"
-                : `dans ${getDaysLeft(event.date)} jours`
-            }}
-          </p>
-        </div>
-      </div>
-
-      <div class="absolute top-16 left-0 right-0 bottom-0">
-        <img
-          v-if="event.photos[0]"
-          :src="'/images/events/' + event.photos[0]"
-          alt="Preview Image"
-          class="w-full h-full object-cover cursor-pointer"
-          @click="openCarousel(event.photos)"
+        <component
+          :is="
+            expandedYears.has(group.label)
+              ? LucideChevronDown
+              : LucideChevronRight
+          "
+          class="w-5 h-5"
         />
+        <span>{{
+          expandedYears.has(group.label) ? "Réduire" : "Afficher"
+        }}</span>
+      </button>
+    </div>
+
+    <div
+      v-if="group.isCurrent || expandedYears.has(group.label)"
+      class="grid grid-cols-1 md:grid-cols-3 gap-5"
+    >
+      <div
+        v-for="event in group.events"
+        :key="event.name + event.date"
+        id="eventItem"
+        class="relative bg-shields-secondary rounded-lg shadow-lg h-64 w-full overflow-hidden transition-transform duration-300 ease-in-out border border-gray-600"
+      >
+        <!-- Bandeau supérieur -->
         <div
-          v-else
-          class="w-full h-full bg-shields-secondary flex items-center justify-center"
+          class="absolute top-0 left-0 right-0 flex items-center justify-between p-4 bg-shields-content z-10 border-b border-gray-600 rounded-t-lg"
         >
-          <LucideCameraOff
-            v-if="getDaysLeft(event.date) === 0"
-            class="w-12 h-12 text-shields-txt-secondary"
+          <h2 class="text-lg font-bold text-white">{{ event.name }}</h2>
+          <div class="flex items-center space-x-2">
+            <LucideCalendar class="w-5 h-5 text-shields-txt-secondary" />
+            <p
+              :class="{
+                'text-orange-400': getDaysLeft(event.date) === 0,
+                'text-green-400': getDaysLeft(event.date) !== 0,
+              }"
+            >
+              {{
+                getDaysLeft(event.date) === 0
+                  ? new Date(event.date).toLocaleDateString("fr-FR")
+                  : getDaysLeft(event.date) === 1
+                    ? "dans 1 jour"
+                    : `dans ${getDaysLeft(event.date)} jours`
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="absolute top-16 left-0 right-0 bottom-0">
+          <img
+            v-if="event.photos[0]"
+            :src="'/images/events/' + event.photos[0]"
+            alt="Preview Image"
+            class="w-full h-full object-cover cursor-pointer"
+            @click="openCarousel(event.photos)"
           />
-          <LucideClock v-else class="w-12 h-12 text-shields-txt-secondary" />
+          <div
+            v-else
+            class="w-full h-full bg-shields-secondary flex items-center justify-center"
+          >
+            <LucideCameraOff
+              v-if="getDaysLeft(event.date) === 0"
+              class="w-12 h-12 text-shields-txt-secondary"
+            />
+            <LucideClock v-else class="w-12 h-12 text-shields-txt-secondary" />
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Swiper Carousel -->
+  <!-- Carousel (shadcn/vue) -->
   <div
     v-if="isCarouselOpen"
-    class="fixed inset-0 z-20 bg-black bg-opacity-75 flex justify-center items-center h-screen w-screen"
+    class="fixed inset-0 z-[100] bg-black/75 flex justify-center items-center h-screen w-screen"
     @click.self="closeCarousel"
   >
-    <Swiper
-      :navigation="true"
-      :autoHeight="true"
-      :modules="modules"
-      :loop="true"
-      :effect="'fade'"
-      :grabCursor="true"
-      :pagination="pagination"
+    <Carousel
+      :opts="{ loop: true }"
+      class="relative w-full max-w-[90vw]"
+      @click="closeCarousel"
     >
-      <SwiperSlide
-        v-for="(photo, index) in currentPhotos"
-        :key="index"
-        @click="closeCarousel"
-      >
-        <img
-          :src="'/images/events/' + photo"
-          class="w-full h-full object-cover"
-        />
-      </SwiperSlide>
-    </Swiper>
+      <CarouselContent class="max-h-[80vh]">
+        <CarouselItem
+          v-for="(photo, index) in currentPhotos"
+          :key="index"
+          class="flex items-center justify-center"
+        >
+          <img
+            :src="'/images/events/' + photo"
+            class="max-w-[90vw] max-h-[80vh] object-contain"
+            @click.stop
+          />
+        </CarouselItem>
+      </CarouselContent>
+      <CarouselPrevious
+        v-if="currentPhotos.length > 1"
+        class="text-white border-white/40 bg-black/30 hover:bg-black/50 hover:border-shields-accent hover:text-shields-accent left-4 top-1/2 -translate-y-1/2 z-20"
+        @click.stop
+      />
+      <CarouselNext
+        v-if="currentPhotos.length > 1"
+        class="text-white border-white/40 bg-black/30 hover:bg-black/50 hover:border-shields-accent hover:text-shields-accent right-4 top-1/2 -translate-y-1/2 z-20"
+        @click.stop
+      />
+    </Carousel>
   </div>
 </template>
 
-<script>
-import { getDaysLeft } from "/src/utils/dateUtils";
+<script setup lang="ts">
+import { ref, computed } from "vue";
+import { getDaysLeft } from "@/utils/dateUtils";
 import {
   Calendar as LucideCalendar,
   Clock as LucideClock,
   CameraOff as LucideCameraOff,
 } from "lucide-vue-next";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import events from "/src/assets/data/events.json";
+import {
+  ChevronDown as LucideChevronDown,
+  ChevronRight as LucideChevronRight,
+} from "lucide-vue-next";
+import eventsData from "@/assets/data/events.json";
+import { groupByAcademicYear } from "@/utils/academicYear";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-import { Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// State
+const events = ref(eventsData);
+const expandedYears = ref(new Set<string>());
+const isCarouselOpen = ref(false);
+const currentPhotos = ref<string[]>([]);
 
-export default {
-  name: "EventsGrid",
-  components: {
-    LucideCalendar,
-    LucideClock,
-    LucideCameraOff,
-    Swiper,
-    SwiperSlide,
-  },
-  data() {
-    return {
-      events: [],
-      isCarouselOpen: false,
-      currentPhotos: [],
-    };
-  },
-  setup() {
-    return {
-      pagination: {
-        clickable: true,
-        renderBullet: function (_index, className) {
-          return '<span class="' + className + '">' + "</span>";
-        },
-      },
-      modules: [Navigation, Pagination],
-    };
-  },
-  computed: {
-    sortedevents() {
-      return this.events.sort((a, b) => new Date(b.date) - new Date(a.date));
-    },
-  },
-  created() {
-    this.loadevents();
-  },
-  methods: {
-    loadevents() {
-      this.events = events;
-    },
-    getDaysLeft,
-    openCarousel(photos) {
-      this.currentPhotos = photos;
-      this.isCarouselOpen = true;
-    },
-    closeCarousel() {
-      this.isCarouselOpen = false;
-    },
-  },
-};
+// Carousel shadcn/vue n'a pas besoin de configuration locale ici
+
+// Groupes d'événements par année scolaire via utilitaire partagé
+const groupedYears = computed(() =>
+  groupByAcademicYear(events.value, (e) => e.date).map((g) => ({
+    label: g.label,
+    startYear: g.startYear,
+    isCurrent: g.isCurrent,
+    events: g.items,
+  })),
+);
+
+function toggleYear(label: string) {
+  const next = new Set(expandedYears.value);
+  if (next.has(label)) next.delete(label);
+  else next.add(label);
+  expandedYears.value = next;
+}
+
+// Methods
+function openCarousel(photos: string[]) {
+  currentPhotos.value = photos;
+  isCarouselOpen.value = true;
+}
+function closeCarousel() {
+  isCarouselOpen.value = false;
+}
 </script>
 
 <style lang="css">
@@ -152,57 +180,5 @@ export default {
   transform: scale(1.03);
 
   border-color: grey;
-}
-
-.swiper {
-  max-width: 90vw;
-  max-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide img {
-  width: auto;
-  height: auto;
-  max-width: 90vw;
-  max-height: 80vh;
-  object-fit: contain;
-  margin: auto;
-}
-
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  opacity: 0.5;
-  background-color: #fff;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: orange;
-  opacity: 0.8;
-  transform: scale(1.5);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #ff8c00;
-  opacity: 0.8;
-  transition: transform 0.1s ease, opacity 0.1s ease;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: white;
-  transform: scale(1.1);
 }
 </style>

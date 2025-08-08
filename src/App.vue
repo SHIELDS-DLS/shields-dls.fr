@@ -1,5 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { RouterView } from "vue-router";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
+defineOptions({ name: "App" });
 </script>
 
 <template>
@@ -15,14 +19,4 @@ import { RouterView } from "vue-router";
   <Footer />
 </template>
 
-<script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-
-export default {
-  name: "App",
-  components: {
-    Header,
-  },
-};
-</script>
+<!-- No second script block needed -->
