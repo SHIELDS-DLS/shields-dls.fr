@@ -9,13 +9,44 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: prod
+    env:
+      VITE_HELLOASSO_CLIENT_ID: ${{ secrets.VITE_HELLOASSO_CLIENT_ID }}
+      VITE_HELLOASSO_CLIENT_SECRET: ${{ secrets.VITE_HELLOASSO_CLIENT_SECRET }}
 
     steps:
-      - name: Deploy to Server
-        uses: appleboy/ssh-action@v1.2.0
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Clean remote target
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          script: ~/update.sh
+          script: |
+            mkdir -p /var/www/html
+            rm -rf /var/www/html/*
+
+      - name: Upload build to server
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          source: "dist/**"
+          strip_components: 1
+          target: "/var/www/html"
