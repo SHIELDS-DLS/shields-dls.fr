@@ -81,5 +81,20 @@
       "TALK_METIER_CYBER/talk-metier-cyber1.jpg",
       "TALK_METIER_CYBER/talk-metier-cyber2.jpg"
     ]
+  },
+  {
+    "name": "EVA - Battle Arena",
+    "date": "2025-05-29",
+    "photos": ["EVA_2025/eva1.jpeg", "EVA_2025/eva2.jpeg"]
+  },
+  {
+    "name": "LeGarden - Padel",
+    "date": "2025-06-21",
+    "photos": []
+  },
+  {
+    "name": "Soirée de désintégration",
+    "date": "2025-07-10",
+    "photos": []
   }
 ]
