@@ -1,26 +1,22 @@
 [
   {
-    "name": "LooXzy",
+    "name": "Prezident",
     "role": "Président"
   },
   {
-    "name": "Prezident",
+    "name": "countZero",
     "role": "Vice-Président"
   },
   {
-    "name": "ArKoo",
+    "name": "Leousse",
     "role": "Trésorier"
   },
   {
-    "name": "Yan",
+    "name": "ArKoo",
     "role": "Secrétaire"
   },
   {
-    "name": "Rettbl",
-    "role": "Community Manager"
-  },
-  {
-    "name": "Softomine",
-    "role": "Community Manager"
+    "name": "Shyphem",
+    "role": "Vice-Secrétaire"
   }
 ]

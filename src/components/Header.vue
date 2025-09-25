@@ -5,10 +5,10 @@
     >
       <TipAlert />
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-8 lg:py-4 relative"
+        class="max-w-screen-xl flex items-center mx-auto py-8 lg:py-4 relative px-4"
       >
         <!-- Left navigation -->
-        <ul class="hidden lg:flex space-x-14 justify-start flex-grow">
+        <ul class="hidden lg:flex space-x-8 flex-1 mr-20 justify-end">
           <NavItem
             v-for="(item, index) in menuItems[0]"
             :key="index"
@@ -22,13 +22,13 @@
         <!-- Logo -->
         <router-link
           to="/"
-          class="absolute left-1/2 transform -translate-x-1/2 top-1"
+          class="absolute left-1/2 transform -translate-x-1/2 top-1 z-10"
         >
           <ShieldsLogo class="h-24" alt="Shields Logo" />
         </router-link>
 
         <!-- Right navigation -->
-        <ul class="hidden lg:flex space-x-14 justify-end flex-grow">
+        <ul class="hidden lg:flex space-x-8 flex-1 ml-20 justify-start">
           <NavItem
             v-for="(item, index) in menuItems[1]"
             :key="index"

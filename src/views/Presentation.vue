@@ -32,7 +32,7 @@
   <div id="team" class="mb-28 pb-20">
     <h1 class="text-3xl font-bold text-center mb-10">Bureau</h1>
     <p class="text-lg text-center mb-10">
-      Pour cette année <strong>2024-2025</strong>, le bureau de l'association
+      Pour cette année <strong>2025-2026</strong>, le bureau de l'association
       SHIELDS est composé de :
     </p>
     <div
