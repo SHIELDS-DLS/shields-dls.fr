@@ -1,0 +1,27 @@
+[Unit]
+Description=SHIELDS Backend API Service
+Documentation=https://github.com/SHIELDS-DLS/shields-dls.fr
+After=network.target
+
+[Service]
+Type=simple
+User=svc-shields
+Group=svc-shields
+WorkingDirectory=/opt/backend
+ExecStart=/usr/bin/node index.js
+Restart=on-failure
+RestartSec=10
+
+# Sécurité
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/opt/backend
+
+# Logs
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=backend
+
+[Install]
+WantedBy=multi-user.target

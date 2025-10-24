@@ -1,0 +1,10 @@
+{
+  "helloasso": {
+    "clientId": "your_client_id_here",
+    "clientSecret": "your_client_secret_here"
+  },
+  "server": {
+    "port": 3001
+  },
+  "environment": "prod"
+}

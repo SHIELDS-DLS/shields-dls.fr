@@ -2,17 +2,13 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "lib": ["esnext", "dom"]
   },
   "include": [
     "src/**/*.ts",

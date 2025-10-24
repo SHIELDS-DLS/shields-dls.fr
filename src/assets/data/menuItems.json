@@ -6,7 +6,7 @@
       "text": "L'association",
       "subitems": [
         { "text": "Présentation", "link": "/presentation" },
-        { "text": "Adhérents", "link": "/members" }
+        { "text": "Membres", "link": "/members" }
       ]
     },
     { "link": "/events", "text": "Événements" }

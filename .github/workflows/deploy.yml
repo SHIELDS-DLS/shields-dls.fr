@@ -26,13 +26,34 @@ jobs:
           node-version: 22
           cache: pnpm
 
-      - name: Install dependencies
+      - name: Install frontend dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
+      - name: Build frontend
         run: pnpm run build
 
-      - name: Clean remote target
+      - name: Install backend dependencies
+        run: |
+          cd backend
+          npm ci --only=production
+
+      - name: Create backend config from secrets
+        run: |
+          cd backend
+          cat > config.json << EOF
+          {
+            "helloasso": {
+              "clientId": "${{ secrets.VITE_HELLOASSO_CLIENT_ID }}",
+              "clientSecret": "${{ secrets.VITE_HELLOASSO_CLIENT_SECRET }}"
+            },
+            "server": {
+              "port": 3001
+            },
+            "environment": "prod"
+          }
+          EOF
+
+      - name: Clean remote targets
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -40,10 +61,14 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            # Nettoyer le frontend
             mkdir -p /var/www/html
             rm -rf /var/www/html/*
 
-      - name: Upload build to server
+            # Arrêter le service backend s'il existe
+            sudo systemctl stop shields-backend || true
+
+      - name: Upload frontend to server
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -53,3 +78,46 @@ jobs:
           source: "dist/**"
           strip_components: 1
           target: "/var/www/html"
+
+      - name: Upload backend to server
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          source: "backend/**"
+          strip_components: 1
+          target: "/opt/backend"
+
+      - name: Setup and start backend service
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            # Copier le fichier de service systemd si ce n'est pas fait
+            if [ -f "/opt/backend/shields-backend.service" ]; then
+              sudo cp /opt/backend/shields-backend.service /etc/systemd/system/
+            fi
+
+            # Définir les permissions correctes
+            sudo chown -R svc-shields:svc-shields /opt/backend
+            sudo chmod +x /opt/backend/index.js
+
+            # Installer les dépendances si nécessaire
+            cd /opt/backend && sudo -u svc-shields npm ci --only=production
+
+            # Recharger systemd et démarrer le service
+            sudo systemctl daemon-reload
+            sudo systemctl enable shields-backend
+            sudo systemctl restart shields-backend
+
+            # Attendre un moment et vérifier le statut
+            sleep 5
+            sudo systemctl status shields-backend --no-pager
+
+            # Health check
+            curl -f http://localhost:3001/health || echo "⚠️ Health check failed"
